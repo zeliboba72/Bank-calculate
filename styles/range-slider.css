@@ -1,0 +1,55 @@
+.calculator__label.label--sum {
+  position: relative;
+}
+
+.calculator__wrap-range-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 105%;
+  top: 42%;
+}
+
+.calculator__range-slider-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.calculator__range-slider {
+  background: #000;
+  width: 100%;
+  height: 6px;
+}
+.noUi-connect {
+  background-color: var(--color-orange);
+}
+
+.noUi-base {
+  background: var(--color-white);
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-handle {
+  box-shadow: none;
+  border-radius: 50%;
+  border: 1px solid var(--color-orange);
+  background-color: var(--color-white);
+}
+
+.noUi-horizontal .noUi-handle {
+  top: -8px;
+  width: 20px;
+  height: 20px;
+}
+
+.noUi-horizontal .noUi-handle:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px var(--color-orange);
+}

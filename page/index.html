@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/theme.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../libs/nouislider.css" />
+    <link rel="stylesheet" href="../styles/range-slider.css" />
+    <link rel="stylesheet" href="../libs/jQueryUI/jquery-ui.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>World Bank</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__top-section">
+          <a href="#" class="header__logo">
+            <img src="../assets/logo.png" alt="Logo" class="logo-img" />
+          </a>
+          <div class="header__contacts">
+            <a href="tel: 8-800-100-5050" class="header__phone-num-first"
+              >8-800-100-5050</a
+            >
+            <a href="tel: +7(3452)522-000" class="header__phone-num-first"
+              >+7(3252)522-000</a
+            >
+          </div>
+        </div>
+        <nav class="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-element">
+              <a href="#" class="header__navigation-link">Кредитные карты</a>
+            </li>
+            <li class="header__navigation-element">
+              <a href="#" class="header__navigation-link active">Вклады</a>
+            </li>
+            <li class="header__navigation-element">
+              <a href="#" class="header__navigation-link">Дебетовая карта</a>
+            </li>
+            <li class="header__navigation-element">
+              <a href="#" class="header__navigation-link">Страхование</a>
+            </li>
+            <li class="header__navigation-element">
+              <a href="#" class="header__navigation-link">Друзья</a>
+            </li>
+            <li class="header__navigation-element">
+              <a href="#" class="header__navigation-link">Интернет-банк</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="bread-crumbs">
+          <ul class="bread-crumbs__list">
+            <li class="bread-crumbs__element">
+              <a href="#1" class="bread-crumbs__link">Главная</a>
+            </li>
+            <li class="bread-crumbs__element">
+              <a href="#2" class="bread-crumbs__link">Вклады</a>
+            </li>
+            <li class="bread-crumbs__element active">
+              <a href="#3" class="bread-crumbs__link">Калькулятор</a>
+            </li>
+          </ul>
+        </div>
+        <div class="calculator">
+          <form class="calculator__form">
+            <h2 class="calculator__title">Калькулятор</h2>
+            <label class="calculator__label">
+              <p class="calculator__label-text">Дата оформления вклада</p>
+              <input
+                type="text"
+                class="calculator__input calculator__date"
+                id="date"
+              />
+            </label>
+            <label class="calculator__label label--sum">
+              <p class="calculator__label-text">Сумма вклада</p>
+              <input
+                type="number"
+                min="1000"
+                max="3000000"
+                class="calculator__input"
+                id="input-1"
+              />
+              <div class="calculator__wrap-range-slider">
+                <div class="calculator__range-slider" id="slider-first"></div>
+                <div class="calculator__range-slider-text">
+                  <p class="calculator__range-slider-min">1 тыс. руб.</p>
+                  <p class="calculator__range-slider-max">3 000 000</p>
+                </div>
+              </div>
+            </label>
+            <label class="calculator__label">
+              <p class="calculator__label-text">Срок вклада</p>
+              <select class="calculator__input calculator__years">
+                <option value="1">1 год</option>
+                <option value="2">2 года</option>
+                <option value="3">3 года</option>
+                <option value="4">4 года</option>
+                <option value="5">5 лет</option>
+              </select>
+            </label>
+            <div class="calculator__label">
+              <p class="calculator__label-text">Пополнение вклада</p>
+              <div class="calculator__input radio">
+                <label for="no">Нет</label>
+                <input type="radio" name="yes-no" id="no" checked />
+                <label for="yes">Да</label>
+                <input type="radio" name="yes-no" id="yes" />
+              </div>
+            </div>
+            <label class="calculator__label label--sum">
+              <p class="calculator__label-text">Сумма пополнения вклада</p>
+              <input
+                type="number"
+                min="1000"
+                max="3000000"
+                class="calculator__input"
+                id="input-2"
+              />
+              <div class="calculator__wrap-range-slider">
+                <div class="calculator__range-slider" id="slider-second"></div>
+                <div class="calculator__range-slider-text">
+                  <p class="calculator__range-slider-min">1 тыс. руб.</p>
+                  <p class="calculator__range-slider-max">3 000 000</p>
+                </div>
+              </div>
+            </label>
+            <div class="calculator__form-footer">
+              <button type="button" class="button">Рассчитать</button>
+              <p class="calculator__result">
+                Результат:
+                <span class="calculator__result-sum">10 250 руб</span>
+              </p>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer__body">
+        <nav class="footer__navigation">
+          <ul class="footer__navigation-list">
+            <li class="footer__navigation-element">
+              <a href="#" class="footer__navigation-link">Кредитные карты</a>
+            </li>
+            <li class="footer__navigation-element">
+              <a href="#" class="footer__navigation-link active">Вклады</a>
+            </li>
+            <li class="footer__navigation-element">
+              <a href="#" class="footer__navigation-link">Дебетовая карта</a>
+            </li>
+            <li class="footer__navigation-element">
+              <a href="#" class="footer__navigation-link">Страхование</a>
+            </li>
+            <li class="footer__navigation-element">
+              <a href="#" class="footer__navigation-link">Друзья</a>
+            </li>
+            <li class="footer__navigation-element">
+              <a href="#" class="footer__navigation-link">Интернет-банк</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../libs/jQueryUI/jquery-ui.min.js"></script>
+    <script src="../libs/nouislider.js"></script>
+    <script src="../js/range-slider.js"></script>
+    <script src="../js/jQuary-date.js"></script>
+    <script src="../js/calculate.js"></script>
+  </body>
+</html>

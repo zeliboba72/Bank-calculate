@@ -1,0 +1,237 @@
+body {
+  font-family: var(--font-family-main);
+  color: var(--color-black);
+}
+.container {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+/* header */
+.header {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* top of header */
+.header__top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-orange);
+  font-size: 26px;
+}
+
+/* nav in header */
+.header__navigation-list {
+  display: flex;
+  height: 45px;
+}
+
+.header__navigation-element {
+  flex: 0 0 16.666%;
+}
+
+.header__navigation-element:not(:last-child) {
+  border-right: 1px solid var(--color-orange);
+}
+
+a.header__navigation-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transition: background 0.2s linear;
+}
+
+a.header__navigation-link.active {
+  background-color: var(--color-orange);
+}
+
+a.header__navigation-link.active:hover {
+  background: var(--color-orange);
+}
+
+a.header__navigation-link:hover {
+  background-color: var(--color-black-hover);
+}
+
+/* main */
+.main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 16px 20px;
+}
+/* bread crumbs */
+.bread-crumbs {
+  color: var(--color-black);
+  font-size: 14px;
+}
+
+.bread-crumbs__list {
+  display: flex;
+}
+
+.bread-crumbs__element {
+  position: relative;
+  margin-right: 10px;
+}
+
+.bread-crumbs__element:not(:last-child)::after {
+  content: "-";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 100%;
+  right: -10px;
+  top: 0;
+}
+
+.bread-crumbs__element a {
+  border-bottom: 1px solid var(--color-black);
+}
+
+.bread-crumbs__element a:hover {
+  color: var(--color-black-hover);
+  border-bottom: 1px solid var(--color-black-hover);
+}
+
+.bread-crumbs__element.active a {
+  color: inherit;
+  pointer-events: none;
+  cursor: default;
+  border-bottom: none;
+}
+
+/* calculator */
+.main .calculator {
+  margin-top: 25px;
+}
+
+.calculator {
+  display: flex;
+  max-width: 800px;
+  background-color: var(--color-bg-grey);
+  padding: 20px;
+}
+
+.calculator__title {
+  text-align: center;
+  font-size: 30px;
+  color: var(--color-orange);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 15px;
+}
+
+.calculator__form {
+  flex: 0 0 45%;
+}
+
+.calculator__label {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.calculator__label-text {
+  display: block;
+  max-width: 200px;
+  text-align: end;
+  font-size: 15px;
+  margin-right: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calculator__input {
+  width: 100px;
+  font-family: var(--font-family-main);
+  padding: 5px;
+}
+
+.calculator__input.radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calculator__form-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.calculator__form-footer .button {
+  margin-right: 10px;
+}
+
+.calculator__result {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.calculator__result-sum {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  padding: 0 15px;
+}
+.footer__navigation {
+  height: 100%;
+}
+.footer__body {
+  max-width: var(--content-width);
+  height: 100%;
+  margin: 0 auto;
+  background: var(--color-black);
+}
+
+.footer__navigation-list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--color-white);
+}
+
+.footer__navigation-link {
+  border-bottom: 1px solid var(--color-white);
+  transition: color 0.2s linear, border 0.2s linear;
+}
+
+.footer__navigation-link.active {
+  color: var(--color-orange);
+  border-bottom: 1px solid var(--color-orange);
+  pointer-events: none;
+}
+
+.footer__navigation-link:hover {
+  color: var(--color-orange);
+  border-bottom: 1px solid var(--color-orange);
+}
